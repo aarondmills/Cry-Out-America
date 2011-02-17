@@ -1,3 +1,21 @@
+# == Schema Information
+# Schema version: 20110217021708
+#
+# Table name: users
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  email      :string(255)
+#  phone      :string(255)
+#  street     :string(255)
+#  city       :string(255)
+#  zipcode    :string(255)
+#  state_id   :integer
+#  county_id  :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:

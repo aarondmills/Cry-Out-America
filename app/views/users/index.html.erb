@@ -1,36 +1,10 @@
 <h1>Listing users</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Street</th>
-    <th>City</th>
-    <th>Zipcode</th>
-    <th>State</th>
-    <th>County</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= user.phone %></td>
-    <td><%= user.street %></td>
-    <td><%= user.city %></td>
-    <td><%= user.zipcode %></td>
-    <td><%= user.state_id %></td>
-    <td><%= user.county_id %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<h2><%= user.firstname %> <%= user.lastname %></h2>
+<p>email: <%= user.email %>, phone: <%= user.phone %></p>
+<p><%= link_to 'Show', user %> <%= link_to 'Edit', edit_user_path(user) %> <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></p>
 <% end %>
-</table>
 
 <br />
 
