@@ -1,4 +1,8 @@
 CryOutAmerica::Application.routes.draw do
+  resources :counties
+
+  resources :states
+
   resources :users
 
   # The priority is based upon order of creation:
