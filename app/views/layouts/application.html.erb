@@ -8,7 +8,149 @@
 </head>
 <body>
 
-<%= yield %>
+<!-- Top header/black bar start -->
+	<div id="header">
+    	<h2 style="float:left;width:500px;padding-top:20px;padding-left:21px;color:#fff;">Contact Management System</h2>
+        <div id="searchbox">
+        	<input type="text" class="searchinput" />
+            <input type="image" src="images/search_btn.png" class="searchbtn" />
+    	</div>
+    </div>
+ <!-- Top header/black bar end -->   
+    
+<!-- Left side bar start -->
+        <div id="left">
+<!-- Left side bar start -->
+
+<!-- Toolbox dropdown start -->
+        	<div id="openCloseIdentifier"></div>
+            <div id="slider">
+                <ul id="sliderContent">
+                    <li><a href="#" title="">Change Username</a></li>
+                    <li class="alt"><a href="#" title="">Change Password</a></li>
+                    <li><a href="#" title="">Change Address</a></li>
+                    <li class="alt"><a href="#" title="">Payment Details</a></li>
+                    <li><a href="#" title="">Log Out</a></li>
+                </ul>
+                <div id="openCloseWrap">
+                    <div id="toolbox">
+            			<a href="#" title="Toolbox Dropdown" class="toolboxdrop">Toolbox <img src="images/icon_expand_grey.png" alt="Expand" /></a>
+            		</div>
+                </div>
+            </div>
+<!-- Toolbox dropdown end -->   
+    	
+<!-- Userbox/logged in start -->
+            <div id="userbox">
+            	<p>Welcome Manager</p>
+                <p><span>You are logged in as Admin</span></p>
+                <ul>
+                	<li><a href="#" title="Check Mail"><img src="images/icons/icon_mail.png" alt="Mail" /></a></li>
+                    <li><a href="#" title="Configure"><img src="images/icons/icon_cog.png" alt="Configure" /></a></li>
+                    <li><a href="#" title="Logout"><img src="images/icons/icon_unlock.png" alt="Logout" /></a></li>
+                </ul>
+            </div>
+<!-- Userbox/logged in end -->  
+
+<!-- Main navigation start -->         
+            <ul id="nav">
+            	<li>
+                    <a class="collapsed heading">Section Heading</a>
+                     <ul class="navigation">
+                        <li><a href="#" title="">Section link here</a></li>
+                        <li><a href="#" title="">Section link here</a></li>
+                        <li><a href="#" title="">Section link here</a></li>
+                    </ul>
+                </li>   
+                
+            </ul>
+        </div>      
+<!-- Main navigation end --> 
+
+<!-- Left side bar start end -->   
+
+<!-- Right side start -->     
+        <div id="right">
+
+<!-- Breadcrumb start -->  
+            <div id="breadcrumb">
+                <ul>	
+        			<li><img src="images/icon_breadcrumb.png" alt="Location" /></li>
+                    <li><a href="#" title="">Coordinator Manager</a></li>
+                    <li>/</li>
+                    <li class="current">Contact Database</li>
+                </ul>
+            </div>
+<!-- Breadcrumb end -->  
+
+<!-- Top/large buttons start -->  
+            <ul id="topbtns">
+            	
+                <li>
+                	<a href="#"><img src="images/icons/icon_lrg_calendar.png" alt="Calendar" /><br />Calendar</a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/icons/icon_lrg_create.png" alt="Create" /><br />Create</a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/icons/icon_lrg_user.png" alt="Users" /><br />Users</a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/icons/icon_lrg_media.png" alt="Media" /><br />Resources</a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/icons/icon_lrg_comment.png" alt="Comment" /><br />Questions</a>
+                </li>
+                <li>
+                	<a href="#"><img src="images/icons/icon_lrg_support.png" alt="Support" /><br />Support</a>
+                </li>
+            </ul>
+<!-- Top/large buttons end -->  
+
+ <!-- Main content start -->      
+            <div id="content">
+
+<!-- Table styles start -->       
+                <div class="container">
+                	<div class="conthead">
+                		<h2>Coordinator Database</h2>
+                    </div>
+                	<div class="contentbox">
+ <%= yield %>   
+                        
+                        <div class="extrabottom">
+                        	<ul class="pagination">
+                                <li class="text">Previous</li>
+                                <li class="page"><a href="#" title="">1</a></li>
+                                <li><a href="#" title="">2</a></li>
+                                <li><a href="#" title="">3</a></li>
+                                <li><a href="#" title="">4</a></li>
+                                <li class="text"><a href="#" title="">Next</a></li>
+                            </ul>
+                            <div class="bulkactions">
+                                <select>
+                                    <option>Select bulk action...</option>
+                                </select>
+                                <input type="submit" value="Apply" class="btn" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Table styles end -->  
+                
+               
+                
+             
+        	</div>
+            
+<!-- Footer start --> 
+            <p id="footer">&copy; yourwebsitecompany.com</p>
+<!-- Footer end -->      
+     
+        </div>
+<!-- Right side end --> 
+
+
 
 </body>
 </html>

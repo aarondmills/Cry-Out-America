@@ -1,11 +1,31 @@
-<h1>Listing Coordinators</h1>
-
-<% @users.each do |user| %>
-<h2><%= user.firstname %> <%= user.lastname %></h2>
-<p>email: <%= user.email %>, phone: <%= user.phone %></p>
-<p><%= link_to 'Show', user %> <%= link_to 'Edit', edit_user_path(user) %> <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></p>
-<% end %>
+<h1>All Coordinators</h1>
 
 <br />
 
 <%= link_to 'New User', new_user_path %>
+
+
+<table width="100%">
+                            <thead>
+                                <tr >
+                                    <th>Coordinator</th>
+                                    <th>Email</th>
+                                    <th>Actions</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+															<% @users.each do |user| %>
+                                <tr class="<%= cycle("alt", "odd") %>">
+                                    <td><%= user.firstname %> <%= user.lastname %></td>
+                                    <td><%= user.email %></td>
+                                    <td><%= link_to 'Details', user %> | <%= link_to 'Edit', edit_user_path(user) %> | <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>
+                              
+                                        
+                                    </td>
+                                   
+                                </tr>
+<% end %>
+                                
+                            </tbody>
+                        </table>

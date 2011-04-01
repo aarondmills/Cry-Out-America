@@ -1,5 +1,10 @@
-<p id="notice"><%= notice %></p>
 
+
+
+<table width="100%">
+                            </thead>
+                            <tbody>
+															
 <p>
   <b>Name:</b>
   <%= @user.firstname %> <%= @user.lastname %>
@@ -43,3 +48,6 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+                                
+                            </tbody>
+                        </table>
