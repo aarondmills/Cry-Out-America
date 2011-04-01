@@ -18,13 +18,19 @@
 #
 
 class User < ActiveRecord::Base
-	attr_accessible :firstname, :lastname, :email, :phone, :street, :county
+	attr_accessible :firstname, :lastname, :email, :phone, :street, :county, :zipcode, :city
 
-	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+belongs_to :state
+belongs_to :county
 
-  validates :firstname,  :presence => true,
-                    :length   => { :maximum => 50 }
-  validates :email, :presence => true,
-                    :format   => { :with => email_regex }
+
+
+
+#	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+#
+ # validates :firstname,  :presence => true,
+  #                  :length   => { :maximum => 50 }
+ # validates :email, :presence => true,
+ #                   :format   => { :with => #email_regex }
 
 end
